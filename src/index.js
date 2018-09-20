@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HomeView from './components/home';
 import './styles.scss';
+//Redux Added
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 function createComponent() {
     var div = document.createElement('div')
@@ -12,4 +15,8 @@ function createComponent() {
 
 createComponent();
 
-ReactDOM.render(<HomeView />, document.getElementById('root'))
+ReactDOM.render(
+    <Provider store={store}>
+        <HomeView />
+    </Provider>,
+    document.getElementById('root'))

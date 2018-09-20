@@ -1,5 +1,6 @@
 import * as Actions from '../actions';
 
+// Initial State 
 const initState = {
     random: []
 }

@@ -23,13 +23,13 @@ class HomeView extends Component {
         return (
             <div className='col'>
                 <ChartView {...this.props} />
-                <small className='text-muted'>Drag Across X-axis to Expand</small>
                 <div className="input-group mb-3 col-sm-4 float-right">
                     <input type="text" className="form-control" value={this.state.count} placeholder="Number of Intervals" onChange={this.handleChange} />
                     <div className="input-group-append">
                         <button onClick={() => this.props.getData(this.state.count)} className="btn btn-outline-secondary" type="button">Load</button>
                     </div>
                 </div>
+                <p className='lead'>Note: Please Use Chrome for Best Experience</p>
             </div>
 
         )

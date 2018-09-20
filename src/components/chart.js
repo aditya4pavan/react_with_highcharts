@@ -16,6 +16,10 @@ const chartView = (props) => {
         title: {
             text: '2D Connected Lines'
         },
+        subtitle:{
+            text: document.ontouchstart === undefined ?
+                        'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+        },
         xAxis: {
             type: 'datetime',
             // X - Axis Formatted here
@@ -79,6 +83,7 @@ const chartView = (props) => {
             pointInterval: -3600 * 1000
         }]
     }
+    // Highchart wrapper and update set to true for refresh
     return <HighchartsReact highcharts={Highcharts} options={options} update={true} />
 }
 

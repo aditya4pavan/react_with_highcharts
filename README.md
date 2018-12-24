@@ -1,4 +1,4 @@
-# Code Challenge
+# React JS with HIGHCHARTS
 
 Display chart with given number of intervals
 
